@@ -12,3 +12,9 @@ WHERE `cfu`> 10;
 SELECT *,DATE_FORMAT(FROM_DAYS(DATEDIFF(NOW(),`date_of_birth`)), '%Y') + 0 AS age
 FROM `students` 
 WHERE YEAR(CURRENT_DATE) - YEAR(`date_of_birth`) > 30;
+
+4:
+SELECT * 
+FROM `courses` 
+WHERE `period`= "I semestre"
+AND `year` = 1;
