@@ -8,3 +8,10 @@ SELECT COUNT(`teachers`.`id`) AS `teachers_in_this_office`,`teachers`.`office_ad
 FROM `teachers`
 GROUP BY `teachers`.`office_address`
 ORDER BY `teachers_in_this_office` ASC;
+
+3:
+SELECT `exams`.`date`,AVG(`exam_student`.`vote`)
+FROM `exams` 
+JOIN `exam_student`
+ON `exams`.`id` = `exam_student`.`exam_id`
+GROUP BY `exams`.`date`;
