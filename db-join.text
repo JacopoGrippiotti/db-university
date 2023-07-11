@@ -12,3 +12,14 @@ JOIN `departments`
 ON `departments`.`id` = `degrees`.`department_id`
 WHERE `departments`.`name`= 'Dipartimento di Neuroscienze'
 AND `degrees`.`level`= 'magistrale';
+
+3:
+SELECT `degrees`.`name`, `courses`.`name`,`teachers`.`name`
+FROM `courses` 
+JOIN `course_teacher` 
+ON `courses`.`id`= `course_teacher`.`course_id` 
+JOIN `degrees`
+ON `degrees`.`id`= `courses`.`degree_id`
+JOIN `teachers` 
+ON `teachers`.`id` = `course_teacher`.`teacher_id` 
+WHERE `teachers`.`id`= 44; 
