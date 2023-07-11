@@ -13,3 +13,10 @@ ORDER BY `teachers_in_this_office` ASC;
 SELECT `exam_student`.`exam_id`,AVG(`exam_student`.`vote`)
 FROM `exam_student`
 GROUP BY `exam_student`.`exam_id`;
+
+4:
+SELECT `departments`.`name`,COUNT(`degrees`.`id`) AS `number_of_degrees`
+FROM `degrees`
+JOIN `departments`
+ON `degrees`.`department_id`= `departments`.`id`
+GROUP BY `departments`.`id`;
