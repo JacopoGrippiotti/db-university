@@ -2,3 +2,9 @@
 SELECT COUNT(`id`) AS `enrolled_students`,YEAR(`students`.`enrolment_date`) AS `year_of_enrollment`
 FROM `students`
 GROUP BY YEAR(`students`.`enrolment_date`);
+
+2:
+SELECT COUNT(`teachers`.`id`) AS `teachers_in_this_office`,`teachers`.`office_address`
+FROM `teachers`
+GROUP BY `teachers`.`office_address`
+ORDER BY `teachers_in_this_office` ASC;
