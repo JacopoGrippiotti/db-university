@@ -14,7 +14,7 @@ WHERE `departments`.`name`= 'Dipartimento di Neuroscienze'
 AND `degrees`.`level`= 'magistrale';
 
 3:
-SELECT `degrees`.`name`, `courses`.`name`,`teachers`.`name`
+SELECT `degrees`.`name`, `courses`.`name`,`teachers`.`name`,`teachers`.`surname`
 FROM `courses` 
 JOIN `course_teacher` 
 ON `courses`.`id`= `course_teacher`.`course_id` 
